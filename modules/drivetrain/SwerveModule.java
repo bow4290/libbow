@@ -6,7 +6,7 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package frc.robot.subsystems.swerve;
+package bow.modules.drivetrain;
 
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.RelativeEncoder;

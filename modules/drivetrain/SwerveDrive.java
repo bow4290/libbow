@@ -5,7 +5,7 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package frc.robot.subsystems.swerve;
+package bow.modules.drivetrain;
 
 import com.kauailabs.navx.frc.AHRS;
 
