@@ -1,8 +1,7 @@
-package frc.robot.sensors;
+package bow.sensors;
 
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableInstance;
-import frc.robot.Constants.LimelightConstants;
 
 public class Limelight {
   private static NetworkTable table = NetworkTableInstance.getDefault().getTable("limelight");
@@ -12,7 +11,14 @@ public class Limelight {
 
   public static enum CamMode { vision, driving }
 
-  public Limelight() {
+  public double h1;            // Distance from ground to limelight lense
+  public double h2;              // Distance from ground to target (8'8")
+  public double a1;  
+
+  public Limelight(double h1, double h2, double a1) {
+    this.h1 = h1;
+    this.h2 = h2;
+    this.a1 = a1;
   }
 
   /** Set the state of the LED */
@@ -93,7 +99,6 @@ public class Limelight {
 
   /** Horizontal distance from limelight to target */
   public double getDistance() {
-    return (LimelightConstants.h2 - LimelightConstants.h1) /
-        Math.tan(Math.toRadians(LimelightConstants.a1 + getYError()));
+    return (h2 - h1) / Math.tan(Math.toRadians(a1 + getYError()));
   }
 }
