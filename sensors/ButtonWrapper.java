@@ -1,4 +1,4 @@
-package frc.robot.sensors;
+package bow.sensors;
 
 import edu.wpi.first.wpilibj.DigitalInput;
 
