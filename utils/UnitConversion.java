@@ -13,7 +13,7 @@ public class UnitConversion {
     public static double inchToMeter(double inch_input){
         return inch_input * 0.0254;
     }
-    public static double MeterToInch(double meter_input){
+    public static double meterToInch(double meter_input){
         return meter_input / 0.0254;
     }
     
